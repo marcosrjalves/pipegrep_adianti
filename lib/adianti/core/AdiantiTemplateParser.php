@@ -25,6 +25,7 @@ class AdiantiTemplateParser
     {
         $ini       = AdiantiApplicationConfig::get();
         $theme     = $ini['general']['theme'];
+        $color     = $ini['general']['color'];
         $libraries = file_get_contents("app/templates/{$theme}/libraries.html");
         $class     = isset($_REQUEST['class']) ? $_REQUEST['class'] : '';
         
@@ -58,6 +59,7 @@ class AdiantiTemplateParser
         $content   = str_replace('{LIBRARIES}', $libraries, $content);
         $content   = str_replace('{class}',     $class, $content);
         $content   = str_replace('{template}',  $theme, $content);
+        $content   = str_replace('{color}',     $color, $content);
         $content   = str_replace('{lang}',      AdiantiCoreTranslator::getLanguage(), $content);
         $content   = str_replace('{debug}',     isset($ini['general']['debug']) ? $ini['general']['debug'] : '1', $content);
         $content   = str_replace('{login}',     TSession::getValue('login'), $content);
