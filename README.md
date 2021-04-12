@@ -35,3 +35,39 @@ Caso você deseje personalizar a instalação, os seguintes arquivos precisam se
 
 ### Atenção: 
 **Necessita de um Servidor Web para hospedar a aplicação. Eu recomendo o uso do NGINX.**
+
+
+Configurações:
+No arquivo **app/config/application.ini** é possível alterar algumas informações:
+- linguagem
+- title
+- theme
+- color
+- multiunit
+- debug
+- multilang
+
+As cores disponiveis para serem usadas na config *color*
+- indigo
+- green
+- amber
+- black
+- blue (default)
+- brown
+- cyan
+- deep-orange
+- deep-purple (não é a banda)
+- grey
+- light-blue
+- lime
+- orange
+- pink
+- purple
+- red
+- teal
+- yellow
+
+
+Afim de utilizar a api REST que vem em conjunto com o framework, deve ser informado, no **app/config/application.ini** os itens
+- seed
+- rest_key
